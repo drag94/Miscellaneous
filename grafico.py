@@ -6,7 +6,7 @@ import statistics
 import matplotlib.dates as mdates
 # =============================================================================
 # 
-# #Questa è la classe con i colori e grassetto e sottolineato dei testi che vuoi
+# 
 # =============================================================================
 
 dati=pd.read_csv('C:/Users/39339/Desktop/vixcurrent.csv')
@@ -19,7 +19,7 @@ media=dati['spread'].mean()
 diff_media_ultimo=spread.values[-1]-media
 mediana=dati['spread'].median(axis=0)
 
-#questo ci servirà per fare la retta zero al grafico dello spread
+# retta zero al grafico dello spread
 y=np.zeros(len(dati.index))
 
 ultimovix= round(dati['VIX Close'].values[-1],2)
