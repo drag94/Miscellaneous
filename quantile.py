@@ -57,13 +57,13 @@ plt.savefig('summary_plot.png')
 
 
 x_mean=summary.loc['mean']
-x_std=summary.loc['std']
+x_std=summary.loc['std']*(1/252)
 fig2,ax2=plt.subplots(1,1, dpi=300)
 ax2.patch.set_facecolor('#ababab')
 ax2.patch.set_alpha(0.3)
 ax2.set_axisbelow(True)
 ax2.yaxis.grid(color='gray', linestyle='dashed')
-ax2.set_ylabel('return t+1 (%)')
+ax2.set_ylabel('return t+1')
 plt.plot(summary.columns,x_mean,linewidth=1)
 plt.plot(summary.columns, x_std,linewidth=1)
 last_quantile=data['quantile_gamma'].iloc[-1]
