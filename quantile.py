@@ -31,7 +31,7 @@ numeri_quantili.sort()
 
 
 lista_vuota = []
-                                                                #return t+1 e gamma quantile
+#return t+1 e gamma quantile
 for quantile in numeri_quantili:
     colonna = np.array(data.loc[data['quantile_gamma']==quantile]['return_t+1'])
     
